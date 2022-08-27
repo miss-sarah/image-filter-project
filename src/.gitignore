@@ -1,0 +1,5 @@
+#Hide Config
+config/*
+
+#aws.ts
+aws.ts

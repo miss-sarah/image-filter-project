@@ -7,7 +7,7 @@ import { filteredImageFromURL, deleteLocalFiles } from "./util/util";
   const app = express();
 
   // Set the network port
-  const port = process.env.PORT || 8085;
+  const port = process.env.PORT || 8082;
 
   // Use the body parser middleware for post requests
   app.use(bodyParser.json());
@@ -17,7 +17,7 @@ import { filteredImageFromURL, deleteLocalFiles } from "./util/util";
     async (req: express.Request, res: express.Response) => {
       let { image_url } = req.query;
       console.log(image_url);
-      if (image_url) {
+      if (!image_url) {
         res.status(400).send("PAGE NOT FOUND");
       } else {
         await filteredImageFromURL(image_url)

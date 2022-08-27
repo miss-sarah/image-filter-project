@@ -1,0 +1,14 @@
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+#Hide Modules
+node_modules/*
+
+#hide npmrc
+.npmrc
+
+#tmp
+www/*
